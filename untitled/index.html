@@ -2,13 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invite</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body class="container">
-<button id="btn1" class="button1"> Ja </button>
-</body>
-<div class = "container">
-    <button id="btn2" class="button2"> Nein </button>
+<div id="question-page" class="content">
+    <h1 id="question">Hast du Lust mit mir am Valentinstag was zu unternehmen?</h1>
+    <div class="button-container">
+        <button id="btn1" class="button1">Ja</button>
+        <button id="btn2" class="button2">Nein</button>
+    </div>
 </div>
+
+<div id="rose-page" class="hidden">
+    <h1 class="rose-text">Richtige Entscheidung! Weitere Infos, was wir unternehmen folgen!  🌹</h1>
+    <div class="rose-container">
+        <div class="stem"></div>
+        <div class="leaf leaf-left"></div>
+        <div class="leaf leaf-right"></div>
+        <div class="flower"></div>
+    </div>
+    <div class="petal petal1"></div>
+    <div class="petal petal2"></div>
+    <div class="petal petal3"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
 </html>
