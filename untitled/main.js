@@ -24,6 +24,7 @@ window.onload = function () {
 
         const noWidth = parseFloat(getComputedStyle(noButton).width);
         const noHeight = parseFloat(getComputedStyle(noButton).height);
+        const noFontsize = parseFloat(getComputedStyle(noButton).fontSize);
         const yesWidth = parseFloat(getComputedStyle(yesButton).width);
         const yesHeight = parseFloat(getComputedStyle(yesButton).height);
 
@@ -35,6 +36,7 @@ window.onload = function () {
         if (noWidth * 0.8 > 20) {
             noButton.style.width = `${noWidth * 0.5}px`;
             noButton.style.height = `${noHeight * 0.5}px`;
+            noButton.style.fontSize = `${noFontsize * 0.5}px`;
         } else {
             noButton.style.display = "none";
         }
