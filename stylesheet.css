@@ -188,3 +188,7 @@ h1 {
     display: flex; /* Make it visible when the class 'show' is added */
 }
 
+@media screen and (max-width: 600px) {
+    /* Füge hier deine spezifischen CSS-Anpassungen für kleinere Bildschirme hinzu */
+    /* z.B. Anpassung von Schriftgrößen, Spaltenlayouts, etc. */
+}
