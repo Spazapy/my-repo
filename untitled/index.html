@@ -20,17 +20,49 @@
 
 <div id="rose-page" class="hidden">
     <h1 class="rose-text">Richtige Entscheidung! Weitere Infos, was wir unternehmen folgen!🌹</h1>
-    <div class="rose-container">
-        <div class="stem"></div>
-        <div class="leaf leaf-left"></div>
-        <div class="leaf leaf-right"></div>
-        <div class="flower"></div>
-    </div>
-    <div class="petal petal1"></div>
-    <div class="petal petal2"></div>
-    <div class="petal petal3"></div>
+        <section class="flower">
+            <div class="big-petal big-petal1"></div>
+            <div class="big-petal big-petal2"></div>
+            <div class="big-petal big-petal3"></div>
+            <div class="big-petal big-petal4"></div>
+            <div class="small-petal small-petal1"></div>
+            <div class="small-petal small-petal2"></div>
+            <div class="small-petal small-petal3"></div>
+            <div class="small-petal small-petal4"></div>
+            <div class="small-petal small-petal5"></div>
+            <div class="small-petal small-petal6"></div>
+            <div class="small-petal small-petal7"></div>
+            <div class="small-petal small-petal8"></div>
+        </section>
 </div>
 
 <script src="main.js"></script>
+<script>
+    document.getElementById("btn1").addEventListener("click", function() {
+        fetch("http://localhost:3000/send-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message: "Ja Button wurde geklickt" })
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error("Error:", error));
+    });
+    // Event Listener für den "Nein"-Button
+    document.getElementById("btn2").addEventListener("click", function() {
+        fetch("http://localhost:3000/send-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message: "Nein Button wurde geklickt" })
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error("Error:", error));
+    });
+</script>
 </body>
 </html>
